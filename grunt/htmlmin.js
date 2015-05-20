@@ -7,8 +7,8 @@ module.exports = {
 			keepClosingSlash: true
 		},
 		expand: true,
-		src: ['**/*.html'],
-		cwd: 'www/',
-		dest: 'www/'
+		src: ["**/*.html"],
+		cwd: "www/",
+		dest: "www/"
 	}
 };

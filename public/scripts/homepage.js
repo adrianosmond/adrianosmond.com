@@ -22,12 +22,12 @@
 	};
 
 	var createJSOnlyElements = function () {
-		var header = document.querySelector('header');
-		header.insertAdjacentHTML('afterend','<button class="close-ao-pic" data-toggle="picture"><span class="cross"></span><span class="visually-hidden">Close picture</span></button>');
-		header.insertAdjacentHTML('beforebegin','<div class="ao-svg-holder"></div>');
-		var articles = document.querySelector('.article-teasers article:last-child');
-		articles.insertAdjacentHTML('afterend','<button class="emphasis click-action back-to-home" data-toggle="articles">Back to the homepage</button>');
-		socialMediaIcons.innerHTML = socialMediaIcons.innerHTML + '<button href="#" data-toggle="social" class="close-social social-media-icon"><span class="cross"></span><span class="social-media-name">Close<span class="visually-hidden"> social media panel</span></span></button>';
+		var header = document.querySelector("header");
+		header.insertAdjacentHTML("afterend","<button class='close-ao-pic' data-toggle='picture'><span class='cross'></span><span class='visually-hidden'>Close picture</span></button>");
+		header.insertAdjacentHTML("beforebegin","<div class='ao-svg-holder'></div>");
+		var articles = document.querySelector(".article-teasers article:last-child");
+		articles.insertAdjacentHTML("afterend","<button class='emphasis click-action back-to-home' data-toggle='articles'>Back to the homepage</button>");
+		socialMediaIcons.innerHTML = socialMediaIcons.innerHTML + "<button href='#' data-toggle='social' class='close-social social-media-icon'><span class='cross'></span><span class='social-media-name'>Close<span class='visually-hidden'> social media panel</span></span></button>";
 	};
 
 	var toggles = {
@@ -191,7 +191,7 @@
 		if (document.readyState === "complete") {
 			loadDoodles();
 		} else {
-			document.addEventListener('readystatechange', loadDoodles);
+			document.addEventListener("readystatechange", loadDoodles);
 		}
 	};
 
@@ -199,7 +199,7 @@
 		if (document.readyState === "complete") {
 			setTimeout(function() {
 				var request = new XMLHttpRequest();
-				request.open('GET', '/images/doodles/doodle-1.svg', true);
+				request.open("GET", "/images/doodles/doodle-1.svg", true);
 
 				request.onload = function() {
 					if (request.status >= 200 && request.status < 400){
