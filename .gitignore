@@ -7,3 +7,4 @@ public/styles/**/*.ejs
 *.map
 *.css
 *.DS_Store
+*.sublime-workspace

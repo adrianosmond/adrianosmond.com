@@ -2,12 +2,6 @@
 	"index": {
 		"layout": false
 	},
-	"accessibility-meet-animation": {
-		"debug": true,
-		"title": "Accessibility, meet animation",
-		"date" : "August 25th, 2014",
-		"summary": "A technique for maintaining keyboard accessibility whilst using animations to display items."
-	},
 	"hell-is-other-developers": {
 		"title": "Hell is other developers",
 		"date" : "March 29th, 2014",
