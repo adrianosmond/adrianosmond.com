@@ -1,0 +1,31 @@
+<h2>The problem</h2>
+
+<p>I've spent quite a lot of time recently looking at responsive drop-down navigations - there are some really good ones out there. However, none of them quite fit the bill for the large CMS driven site that I'm currently working on. As it's going to be managed by content editors after we're finished building it, we have to have something that's flexible - something that won't break if they add or remove links or change the length of text in any of them. After some thinking we came up with the following constraints:</p>
+
+<ol>
+<li>It needs to be able to work with any number of links of any length.</li>
+<li>It still needs to work without code changes if someone decides to change the site's breakpoints in the future.</li>
+<li>It has to bump down the content rather than be overlaid above it. This is so that small screen (mobile) users don't have to scroll back up to the header in order to close the navigation before they can see the top of the content again.</li>
+<li>Its expansion should be animated so as not to provide the user with a jarring experience and to show that the content is being pushed down.</li>
+<li><a href="http://jankfree.org/" target="_blank">Jank</a> sucks, so the animation has to be hardware accelerated on mobile.</li>
+</ol>
+
+<p>There. We aren't fussy, are we?</p>
+
+<p>Currently most of the navigations I've seen won't work on this project for one of a couple of reasons.</p>
+
+<h2>Hard-coding of values</h2>
+
+<p>If you know exactly how many items are in your navigation, and how tall it is, you can solve this problem really easily. There are quite a few solutions out there that involve wrapping the whole page in a container div and using CSS3's transform: translateY to move the page up and down behind a fixed header. It looks great on mobile and animates super-smoothly on the GPU but it doesn't work with leaving the navigation in the hands of content editors. Every time they choose to change the navigation they could potentially change it's height across any one of the breakpoints and it'd require a CSS change to fix it. Not the end of the world, but a coupling we don't want. Also, transform: translate treats elements in the same way that position: relative does - it leaves space where the element would've been. This means that if you have a long list of links, while the navigation isn't open there's a large amount of white space that sits below the footer, which you can scroll to. That just looks weird. <a href="http://www.jordanm.co.uk/lab/topdrawer" target="_blank">Top Drawer</a> is a slick example of this that's made slightly flawed (in my opinion) by the space it leaves at the bottom of the page.</p>
+
+<h2>Animation on height</h2>
+
+<p>If we were only worried about desktop browsers we'd solve this problem in an instant by animating the height of the navigation (or more likely max-height so as to let it work with any size list of links). Unfortunately, mobile browsers don't cope with this very well. Their GPUs can't hardware accelerate the transition as by changing the height you're changing the object that the GPU is working with. The result can easily turn into a janky mess that gets worse as your navigation or your page becomes more complicated. <a href="http://responsive-nav.com/" target="_blank">Responsive-nav.com</a>, <a href="http://osvaldas.info/" target="_blank">Osvaldas.info</a> and <a href="http://jasonweaver.name/lab/flexiblenavigation/" target="_blank">Jason Weaver's Flexnav</a> are all great, but suffer in performance on mobile due to animation of height (or max-height).</p>
+
+<hr/>
+A quick tangent about slide-out navigations... A slide-out navigation (as can be found in Google and Facebook's mobile sites, as well as many others) would be a really nice solution to this problem and would be easy to implement. The development and design teams pushed for this as it's becoming an increasingly common pattern on mobile. Unfortunately the company doing the UX for the project refused to go with it, saying it had tested badly on previous projects that they'd worked on. I tend to disagree and think that owners of the smartphones that are on our supported browser list will understand, but oh well. If you've got a similar set of problems to solve, a slide-out navigation might be a really good fit for you. <a href="http://dbushell.github.com/Responsive-Off-Canvas-Menu/step4.html" target="_blank">The final demo</a> from <a href="http://coding.smashingmagazine.com/2013/01/15/off-canvas-navigation-for-responsive-website/" target="_blank">David Bushell's Smashing Magazine article</a> is another really great example of this pattern, this time with a <a href="https://github.com/dbushell/Responsive-Off-Canvas-Menu" target="_blank">Github repository you can browse</a>.</p>
+<hr/>
+
+<h2>My solution</h2>
+
+<p>By combining some of the techniques seen in the examples above, I managed the make a navigation that meets all of our criteria. I've <a href="http://cdpn.io/rGtLw" target="_blank">posted an example of it on Codepen</a>. Feel free to play with it/fork it there. I don't think it's perfect - far from it. I'd much prefer it if the content slid down at the same rate as the navigation links, but I haven't managed to get that to work whilst maintaining hardware acceleration for mobile yet. If you've got a better solution - please <a href="http://twitter.com/adrianosmond">get in touch!</a></p>

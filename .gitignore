@@ -1,0 +1,8 @@
+node_modules/
+www/
+public/scripts/dist/
+public/styles/**/*.ejs
+
+*.map
+*.css
+*.DS_Store

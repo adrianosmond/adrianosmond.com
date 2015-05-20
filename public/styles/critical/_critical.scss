@@ -1,0 +1,127 @@
+@import "../vars";
+
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Open Sans Light'), local('OpenSans-Light'), url(http://fonts.gstatic.com/s/opensans/v10/DXI1ORHCpsQm3Vp6mXoaTRampu5_7CjHW5spxoeN3Vs.woff2) format('woff2');
+}
+
+//UNIVERSAL STYLES
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+}
+html {
+	height: 100%;
+}
+body {
+	min-height: 100%;
+	margin: 0 auto;
+	padding-bottom: 1em;
+	color: $text-colour;
+	font-size: $base-font-size-small;
+	font-family: $font-family-body;
+	width: 90%;
+	line-height: $line-height;
+	max-width: 33em;
+	background-color: $background-colour;
+	font-weight: 300;
+}
+h1 {
+	font-family: $font-family-headings;
+	font-weight: 300;
+	font-size: $base-font-size-heading;
+	line-height: 1.3;
+	color: $heading-colour;
+}
+a {
+	color: $emphasis-colour;
+}
+p {
+	margin: ($line-height * 1em) 0;
+	&.article-summary {
+		font-size: 1.25em;
+		font-family: $font-family-teaser;
+		font-style: italic;
+	}
+}
+ul, ol {
+	padding-left: 1.5em;
+}
+li {
+	margin-bottom: 1.5em;
+}
+//SITE WIDE STYLES 
+.header-link {
+	display: block;
+	text-decoration: none;
+	position: relative;
+	padding-left: 2.3em;
+	height: 3em;
+	border-bottom: 1px solid $divider-colour;
+}
+.header-image {
+	position: absolute;
+	top: 0.5em;
+	left: 0;
+	height: 2em;
+	width: 2em;
+	path {
+		fill: $emphasis-colour;
+	}
+}
+.header-text {
+	margin: 0;
+	padding: 0.55em 0;
+	font-size: 1.25em;
+	font-weight: 300;
+	text-transform: uppercase;
+	color: $emphasis-colour;
+}
+@media screen and (min-width: 36em) {
+	//UNIVERSAL
+	body {
+		line-height: 1.75;
+	}
+	p {
+		margin: 1.5em 0;
+	}
+}
+@media screen and (min-width: 41em) {
+	//UNIVERSAL
+	body {
+		font-size: 1.125em;
+	}
+	h1 {
+		font-size: 1.125 * $base-font-size-heading;	
+	}
+}
+@media screen and (min-width: 46em) {
+	//UNIVERSAL
+	body {
+		font-size: 1.25em;
+	}
+	h1 {
+		font-size: 1.25 * $base-font-size-heading;	
+	}
+}
+@media screen and (min-width: 50em) {
+	//UNIVERSAL
+	body {
+		font-size: 1.375em;
+	}
+	h1 {
+		font-size: 1.375 * $base-font-size-heading;	
+	}
+}
+@media screen and (min-width: 55em) {
+	//UNIVERSAL
+	body {
+		font-size: 1.5em;
+	}
+	h1 {
+		font-size: 1.5 * $base-font-size-heading;	
+	}
+}

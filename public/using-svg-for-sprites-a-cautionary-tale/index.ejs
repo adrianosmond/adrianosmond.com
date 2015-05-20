@@ -1,0 +1,35 @@
+<h2>Prologue</h2>
+<p>Let me start by saying, I love SVG. If I didn't, I wouldn't have tried using it for our icons on the <a href="http://tfl.gov.uk" target="_blank">new website I've been making for Transport for London</a></p>
+<h2>Falling in love with SVG</h2>
+<p>SVG has some massive plus points - resolution independence being the most obvious one. In addition to the fact that SVG will render crisply on the screens of tomorrow, whatever their pixel density turns out to be, it also remains crisp irrespective of viewport zooming. This is great for people who are partially sighted, as they don't have to look at blurry icons if they use browser zoom. As TfL is a government organisation we care a lot about accessibility, so this more than made up for the little bit of extra work we had to do to get the sprite to display in browsers that don't support SVG (I'm looking at you, Android 2.3).</p>
+<p>This snippet, along with a little help from <a href="http://modernizr.com" target="_blank">Modernizr</a> for SVG detection solved all our problems and everything was rosy at first.</p>
+<pre><code>.icon {
+    ...
+    background-image: url('path/to/sprite.svg');
+    //Hack for IE 8 and below
+    background-image: url('path/to/sprite.png')\9;
+}
+
+//Pretty much only Android 2.3 needs this
+.no-svg .icon {
+    background-image: url('path/to/sprite.png');
+}</code></pre>
+<h2>Time to change the relationship status to "It's complicated"</h2>
+<p>Our love affair with SVG hit its first blip when we came to build an autocomplete for TfL's Journey Planner. The main purpose of the autocomplete was to get users to pick from a list of London's stations. The wireframes also included icons symbolising which methods of transport are available at each station, so as to provide users with reassurance that they've picked the right station. Technically speaking this was no problem. <a href="https://github.com/twitter/typeahead.js/" target="_blank">Typeahead</a> (Twitter's open-source autocomplete) is flexible and easy to use - it lets you use your own templates. On desktop this was all great, but when we came to test on mobile we encountered problems. My iPhone 4S churned away as soon as I started typing any characters, leaving the keyboard totally unresponsive for a few seconds. Android devices didn't really perform any better. At first we wrongly suspected Typeahead to be the culprit, but after some digging we discovered that swapping the SVG sprite for the PNG one completely solved all of the performance woes.</p>
+<p>This wasn't quite enough to put us off SVG. It was less of an issue on newer, faster phones and SVG was still our first love. Fast-forward a few weeks to the day on which the site got leaked to the public and this tweet concerned us:</p>
+<blockquote class="twitter-tweet" data-partner="tweetdeck"><p>Beta TfL website looks nice <a href="http://t.co/seE0RljJWC">http://t.co/seE0RljJWC</a> by my god is it slow in Firefox (ok in Chrome)</p>
+<p>&mdash; Eoin Bailey (@eoinbailey) <a href="https://twitter.com/eoinbailey/statuses/347320464638623745">June 19, 2013</a></p></blockquote>
+<p><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script></p>
+<p>After some more digging, SVG seemed to be the root of these problems and once again swapping out our sprite with the PNG version seemed to fix things. This time it was too much - we decided SVG had to go in favour of double-sized PNGs. (A lot of people have mentioned icon fonts. We tried using them at first but dropped them when we needed multicoloured icons - TfL are very protective of their branding.)</p>
+<h2>Airing our dirty laundry on Codepen</h2>
+<p>It was at this point that I decided to create a test to see just how bad things were. I started with an empty page and just made a grid of icons, with an option to change whether they were SVG or PNG. I opened this in Firefox and scrolled the page - or tried to. My work laptop isn't great, but Firefox crashed every time I tried this. Chrome didn't crash but definitely showed some <a href="http://jankfree.org" target="_blank">jank</a>. I dreaded testing in IE, but it actually performed the best of all the browsers - it's nice to be surprised every once in a while.</p>
+<p>The purpose of this test was simply to compare the performance of SVG and PNG for sprites. When I put the test up on Codepen I quickly added jQuery scrolling to the page because I thought it might get people interested - nobody wants to read instructions but if the page starts moving, people are more likely to wonder what's going on. Those who questioned my use of setInterval or jQuery animation for the task, or tried to solve things with CSS3 transforms missed the point. The point was that <em>all other things being equal, SVG sprites can create more jank than PNG ones</em>. Hopefully this will not always be the case.</p>
+<h2>Epilogue</h2>
+<p>Does it mean you shouldn't use SVG on your site? Not necessarily. I've you've got your assets in a vector format, I'd recommend giving it a go - just be wary of performance issues and make sure you test on lower end hardware. The fact that IE performs well here makes me really optimistic. IE's slow release cycle often holds back the web (IMHO), but since they're ahead of the curve on this one this is an issue that has the potential to be fixed pretty quickly. (<a href="https://code.google.com/p/chromium/issues/detail?id=253091" target="_blank">Chrome</a> and <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=886279" target="_blank">Firefox</a> already have bugs filed for this issue).</p>
+<p>Feel free to let me know your thoughts in the comments below or <a href="http://twitter.com/adrianosmond" target="_blank">on Twitter</a> - I'd love to hear from you.</p>
+<h2>Update 1 - 26/6/2013</h2>
+<p>Some very quick work from <a href="https://plus.google.com/102591823881851233346" target="_blank">Philip Rogers</a> of Google has fixed the issue in Chrome. This will turn up in Chrome Canary from tomorrow, so will work its way on to people's computers in the not too distant future.</p>
+<h2>Update 2 - 23/8/2013</h2>
+<p>And the fix is in Chrome! I have massive respect for the Chrome team - 2 months from the bug being found to a fix dropping in the stable version.</p>
+<h2>Update 3 - 24/3/2014</h2>
+<p>It's been pointed out to me that the fix has now also landed in Firefox.</p>
