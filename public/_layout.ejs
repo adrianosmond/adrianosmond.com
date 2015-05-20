@@ -11,29 +11,12 @@
 		<style><%- partial("styles/critical/_article-critical") %></style>
 	</head>
 	<body class="article">
-		<header data-toggle="articles">
-			<a href="/" class="header-link">
-				<svg class="header-image" xmlns="http://www.w3.org/2000/svg" viewBox="-0.939 0 914 920"><path fill="#fff" d="M453.06 0c-45.712 0-89.867 6.67-131.545 19.085l103.16 283.426c9.212-1.648 18.7-2.51 28.387-2.51 88.366 0 160 71.634 160 160 0 59.435-32.407 111.298-80.515 138.89l103.156 283.418C798.89 811.635 913.06 649.153 913.06 460c0-254.05-205.948-460-460-460zM154.596 109.973C79.965 173.67 25.958 260.81 3.97 360h241.628l-91.003-250.027zM0 540c37.66 214.755 224.28 378.227 449.413 379.977L311.113 540H0z"/></svg>
-				</svg>
-				<h1 class="header-text">Adrian Osmond</h1>
-			</a>
-		</header>
+		<%- partial("_partials/_header") %>
 		<article role="main" class="main">
 			<h1><%= title %></h1>
 			<p class="article-summary"><%= summary %></p>
 			<%- yield %>
 		</article>
-		
-		<script type="text/javascript" src="../scripts/dist/script.min.js" async></script>
-		<script>
-			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-			ga('create', 'UA-39437558-1', 'auto');
-			ga('send', 'pageview');
-		</script>
-		<link rel="stylesheet" type="text/css" href="../styles/style.css">
+		<%- partial("_partials/_footer") %>
 	</body>
 </html>

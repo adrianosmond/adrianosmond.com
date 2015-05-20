@@ -75,7 +75,12 @@
 		},
 		"articles": {
 			active: false,
-			preToggle: function () {
+			preToggle: function (e) {
+				//on the homepage we don't want to follow the link
+				// back to the homepage so we prevent default
+				if (e) {
+					e.preventDefault();
+				}
 				var scrollY = window.scrollY;
 				if (scrollY > 0 && this.active) {
 					scrollAndShowArticles(scrollY);
@@ -114,14 +119,15 @@
 		}
 	};
 
-	var toggle = function (t) {
+	var toggle = function (e) {
+		var t = e;
 		if (typeof t !== "string") {
 			t = this.attributes.getNamedItem("data-toggle").value;
 		}
 
 		var obj = toggles[t];
 		if (obj) {
-			if (!obj.preToggle || obj.preToggle()) {
+			if (!obj.preToggle || obj.preToggle(e)) {
 				bodyClasses.toggle("show-" + t);
 				obj.active = !obj.active;
 				if (obj.postToggle) {

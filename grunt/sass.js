@@ -31,7 +31,7 @@ module.exports = {
 			expand: true,
 			cwd: "public/styles",
 			src: ["critical/*.scss"],
-			dest: "public/styles",
+			dest: "www/styles",
 			ext: ".ejs"
 		}]
 	}
