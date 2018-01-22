@@ -3,7 +3,7 @@ import React, { Component }  from 'react'
 import HomepageHeader from '../components/HomepageHeader'
 import Nav from '../components/Nav'
 import ProjectGrid from '../components/ProjectGrid'
-import SmoothScroll from '../lib/SmoothScroll'
+import SmoothScroll from '../utilities/SmoothScroll'
 import cvPdf from '../assets/adrian-osmond-cv.pdf'
 
 class IndexPage extends Component {

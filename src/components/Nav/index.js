@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import SmoothScroll from '../../lib/SmoothScroll'
+import SmoothScroll from '../../utilities/SmoothScroll'
 import './index.css';
 
 class Nav extends Component {
