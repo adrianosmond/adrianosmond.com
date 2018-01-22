@@ -1,4 +1,5 @@
 import React, { Component }  from 'react'
+import Helmet from 'react-helmet'
 // import Link from 'gatsby-link'
 import HomepageHeader from '../components/HomepageHeader'
 import Nav from '../components/Nav'
@@ -10,6 +11,7 @@ class IndexPage extends Component {
   render () {
     return (
       <article>
+        <Helmet title="adrianosmond.com - The personal site of Adrian Osmond" />
         <HomepageHeader />
         <Nav />
         <div className="container">
