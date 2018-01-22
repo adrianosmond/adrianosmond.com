@@ -1,2 +1,3 @@
 # adrianosmond.com
-The setup for adrianosmond.com
+
+Source for my site.
