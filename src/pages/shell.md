@@ -13,8 +13,18 @@ I led the front end development of this modular design, and built a pattern libr
 - ES6 modules in Vanilla JS
 - Babel & Webpack
 - SCSS
-- Assemble (static site generator) to present the patterns in a library
+- Assemble (static site generator) to present the patterns in a library and form the basis for documentation of when you should use this pattern and how to use it
 
 ## The Result
 
 I'm really pleased with the result. We managed to turn quite a dry and complicated subject into something that is attractive and simple to use. And we managed to do it modularly to give Shell a series of patterns that they can use to implement future designs whilst maintaining consistency with the work that's already been done.
+
+The following are screenshots taken from the build:
+
+![SCOL pages on mobile](/assets/images/projects/scol-mob.jpg)
+
+![SCOL Order a Card page](/assets/images/projects/scol-order-a-card.jpg)
+
+![SCOL Card Details page](/assets/images/projects/scol-card-details.jpg)
+
+![SCOL Recent Transactions page](/assets/images/projects/scol-recent-transactions.jpg)
