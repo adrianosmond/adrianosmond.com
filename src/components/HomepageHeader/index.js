@@ -7,7 +7,7 @@ import './index.css';
 
 const HomepageHeader = () => (
   <div>
-    <img className="me" src={me300} srcSet={`${me300} 148w, ${me600} 296w, ${me1000} 493w, ${me1880} 926w`} alt="" />
+    <img className="me" src={me300} srcSet={`${me300} 148w, ${me600} 296w, ${me1000} 493w, ${me1880} 926w`} alt="Picture of me" />
     <h1 className="welcome">
       <span className="welcome__hello">Hello!</span><br />
       <span className="welcome__name">I'm Adrian Osmond,</span><br />

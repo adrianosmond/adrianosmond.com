@@ -125,7 +125,7 @@ const IndexPage = ({data}) => {
           </section>
         </div>
       </div>
-      <img src={meMountain300} srcSet={`${meMountain300} 300w, ${meMountain600} 600w, ${meMountain900} 900w, ${meMountain1500} 1500w`} alt="" style={{display: 'block'}} /></article>
+      <img src={meMountain300} srcSet={`${meMountain300} 300w, ${meMountain600} 600w, ${meMountain900} 900w, ${meMountain1500} 1500w`} alt="Me in Arthur's Pass National Park, New Zealand" style={{display: 'block'}} /></article>
   )
 }
 
