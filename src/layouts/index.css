@@ -468,6 +468,10 @@ a {
   color: #1258A0;
 }
 
+img {
+  max-width: 100%;
+}
+
 .container {
   background-color: white;
   padding: 1rem;

@@ -12,7 +12,7 @@ const iconAndTitle = (project) => (
 const ProjectGrid = ({ projects }) => (
   <ul className="icon-grid">
     {projects.map((project, idx) => (
-      <li className="icon-grid__item">
+      <li className="icon-grid__item" key={idx}>
         {project.page ?
           <Link to={slug(project.name)} className="icon-grid__tile">
             {iconAndTitle(project)}

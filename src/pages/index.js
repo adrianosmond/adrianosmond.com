@@ -5,6 +5,11 @@ import Nav from '../components/Nav'
 import ProjectGrid from '../components/ProjectGrid'
 import SmoothScroll from '../utilities/SmoothScroll'
 import cvPdf from '../assets/adrian-osmond-cv.pdf'
+import meMountain300 from '../assets/images/me-mountain-300.jpg'
+import meMountain600 from '../assets/images/me-mountain-600.jpg'
+import meMountain900 from '../assets/images/me-mountain-900.jpg'
+import meMountain1200 from '../assets/images/me-mountain-1200.jpg'
+import meMountain1500 from '../assets/images/me-mountain-1500.jpg'
 import './index.css'
 
 const IndexPage = ({data}) => {
@@ -71,8 +76,8 @@ const IndexPage = ({data}) => {
             </p>
             <ProjectGrid projects={projects}/>
           </section>
-          <section className="section">
-            <h2 className="section__heading" id="get-in-touch">Get in Touch</h2>
+          <section className="section" id="get-in-touch">
+            <h2 className="section__heading">Get in Touch</h2>
             <div className="section__intro">
               <p>
                 Feel free to reach out to me if you have something to say or you think we should
@@ -120,7 +125,7 @@ const IndexPage = ({data}) => {
           </section>
         </div>
       </div>
-    </article>
+      <img src={meMountain300} srcSet={`${meMountain300} 300w, ${meMountain600} 600w, ${meMountain900} 900w, ${meMountain1500} 1500w`} alt="" style={{display: 'block'}} /></article>
   )
 }
 
