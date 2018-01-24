@@ -17,7 +17,7 @@ const ProjectGrid = ({ projects }) => (
           <Link to={slug(project.name)} className="icon-grid__tile">
             {iconAndTitle(project)}
           </Link> :
-          <div className="icon-grid__tile">
+          <div className="icon-grid__tile icon-grid__tile--inactive">
             {iconAndTitle(project)}
           </div>
         }
