@@ -70,8 +70,8 @@ const IndexPage = ({data}) => {
             <p className="section__intro">
               Here are some of the clients I've had the privilege of working with. You can click through
               to find out what I did with some of them and there'll be more info on what I did
-              with the rest soon. In the mean time, if you'd like more details you can &nbsp;
-              <a href={cvPdf} target="_blank">check out my CV</a> or &nbsp;
+              with the rest soon. In the mean time, if you'd like more details you can{' '}
+              <a href={cvPdf} target="_blank">check out my CV</a> or{' '}
               <a href="#get-in-touch" onClick={SmoothScroll}>get in touch</a>
             </p>
             <ProjectGrid projects={projects}/>
