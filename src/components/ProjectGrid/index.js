@@ -4,7 +4,7 @@ const slug = (name) => name.trim().toLowerCase().replace(/\s/g, '-')
 
 const iconAndTitle = (project) => (
   <div>
-    <img src={withPrefix(project.logo)} alt={`${project.name} logo`} className="icon-grid__icon" />
+    <img src={withPrefix(project.logo)} alt={`${project.name} logo`} className="icon-grid__icon" title={project.name} />
     <span className="icon-grid__title">{project.name}</span>
   </div>
 )
