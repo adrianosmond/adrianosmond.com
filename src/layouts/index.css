@@ -528,10 +528,6 @@ img {
   background-color:
 }
 
-.icon-grid__tile--inactive {
-  filter: grayscale(75%);
-}
-
 .icon-grid__title {
   position: absolute;
   opacity: 0;

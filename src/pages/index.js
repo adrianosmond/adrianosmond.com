@@ -68,9 +68,9 @@ const IndexPage = ({data}) => {
           <section className="section" id="my-work">
             <h2 className="section__heading">My Work</h2>
             <p className="section__intro">
-              Here are some of the clients I've had the privilege of working with. I'm in
-              the process of building this site out and there'll be more info on what I did
-              with these clients soon. In the mean time, if you'd like more details you can &nbsp;
+              Here are some of the clients I've had the privilege of working with. You can click through
+              to find out what I did with some of them and there'll be more info on what I did
+              with the rest soon. In the mean time, if you'd like more details you can &nbsp;
               <a href={cvPdf} target="_blank">check out my CV</a> or &nbsp;
               <a href="#get-in-touch" onClick={SmoothScroll}>get in touch</a>
             </p>
