@@ -1,12 +1,14 @@
 // import React from "react";
 // import Helmet from 'react-helmet'
 // import Link, { withPrefix } from 'gatsby-link'
+// import Meta from '../components/Meta';
 // import './work.css'
 
 // export default ({ data }) => {
 //   const project = data.markdownRemark;
 //   return (
 //     <article className="work-page">
+//       <Meta />
 //       <Helmet title={`Work done with ${project.frontmatter.title} - Adrian Osmond`} />
 //       <div className="container">
 //         {/* <img src={withPrefix(project.frontmatter.logo)} style={{

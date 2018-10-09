@@ -1,5 +1,7 @@
-import React, { Component }  from 'react'
+import React  from 'react'
+import { graphql } from 'gatsby'
 import Helmet from 'react-helmet'
+import Meta from '../components/Meta';
 import HomepageHeader from '../components/HomepageHeader'
 import Nav from '../components/Nav'
 import ProjectGrid from '../components/ProjectGrid'
@@ -20,6 +22,7 @@ const IndexPage = ({data}) => {
   }))
   return (
     <article>
+      <Meta />
       <Helmet title="The personal site of Adrian Osmond - adrianosmond.com" />
       <HomepageHeader />
       <Nav />
@@ -72,7 +75,7 @@ const IndexPage = ({data}) => {
               to find out what I did with some of them and there'll be more info on what I did
               with the rest soon. In the mean time, if you'd like more details you */}
               Here are some of the clients I've had the privilege of working with. If you'd like more details you
-              can <a href={cvPdf} target="_blank">check out my CV</a> or <a href="#get-in-touch" onClick={SmoothScroll}>get in touch</a>
+              can <a href={cvPdf} target="_blank" rel="noopener noreferrer">check out my CV</a> or <a href="#get-in-touch" onClick={SmoothScroll}>get in touch</a>
             </p>
             <ProjectGrid projects={projects}/>
           </section>
@@ -125,7 +128,8 @@ const IndexPage = ({data}) => {
           </section>
         </div>
       </div>
-      <img src={meMountain300} srcSet={`${meMountain300} 300w, ${meMountain600} 600w, ${meMountain900} 900w, ${meMountain1500} 1500w`} alt="Me in Arthur's Pass National Park, New Zealand" style={{display: 'block'}} /></article>
+      <img src={meMountain300} srcSet={`${meMountain300} 300w, ${meMountain600} 600w, ${meMountain900} 900w, ${meMountain1200} 1200w, ${meMountain1500} 1500w`} alt="Me in Arthur's Pass National Park, New Zealand" style={{display: 'block'}} />
+    </article>
   )
 }
 

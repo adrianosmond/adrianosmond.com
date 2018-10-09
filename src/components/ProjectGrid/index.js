@@ -1,6 +1,6 @@
 import React from 'react';
-import Link, { withPrefix } from 'gatsby-link'
-const slug = (name) => name.trim().toLowerCase().replace(/\s/g, '-')
+import { withPrefix } from 'gatsby-link'
+// const slug = (name) => name.trim().toLowerCase().replace(/\s/g, '-')
 
 const iconAndTitle = (project) => (
   <div>
