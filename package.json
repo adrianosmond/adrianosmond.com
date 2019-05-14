@@ -1,17 +1,17 @@
 {
-  "name": "gatsby-starter-default",
-  "description": "Gatsby default starter",
+  "name": "adrian-osmond-com",
+  "description": "The website of Adrian Osmond",
   "version": "1.0.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Adrian Osmond",
   "dependencies": {
-    "gatsby": "^2.0.38",
-    "gatsby-link": "^2.0.4",
-    "gatsby-plugin-react-helmet": "^3.0.0",
-    "gatsby-source-filesystem": "^2.0.2",
-    "gatsby-transformer-remark": "^2.1.6",
-    "react": "^16.5.2",
-    "react-dom": "^16.5.2",
-    "react-helmet": "^5.2.0"
+    "gatsby": "^2.4.4",
+    "gatsby-link": "^2.1.1",
+    "gatsby-plugin-react-helmet": "^3.0.12",
+    "gatsby-source-filesystem": "^2.0.33",
+    "gatsby-transformer-remark": "^2.3.12",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-helmet": "^5.2.1"
   },
   "keywords": [
     "gatsby"
@@ -25,6 +25,6 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
-    "prettier": "^1.9.2"
+    "prettier": "^1.17.1"
   }
 }
