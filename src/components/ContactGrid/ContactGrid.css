@@ -1,0 +1,36 @@
+.contact-grid {
+  display: grid;
+  margin-top: 2rem;
+  padding-left: 0;
+  grid-template-columns: repeat(auto-fill, minmax(3rem, 1fr));
+  grid-gap: 1rem;
+}
+
+.contact-grid__item {
+  position: relative;
+  overflow: hidden;
+  list-style-type: none;
+}
+
+.contact-grid__tile {
+  display: block;
+  padding-bottom: 100%;
+  background-color: var(--color-gray);
+  text-decoration: none;
+}
+
+.contact-grid__title {
+  position: absolute;
+  opacity: 0;
+
+}
+
+.contact-grid__icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 60%;
+  height: 60%;
+  margin-left: -30%;
+  margin-top: -30%;
+}
