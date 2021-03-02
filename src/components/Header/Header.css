@@ -47,7 +47,6 @@
     padding-left: 12.5rem;
     padding-right: 2rem;
     font-size: 3rem;
-    min-height: calc(var(--photo-height) - 3 * var(--welcome-padding) - var(--nav-height));
   }
 
   .welcome::before {
