@@ -1,8 +1,8 @@
 import React from 'react';
-import me300 from '../../assets/images/me-300-gray.jpg';
-import me600 from '../../assets/images/me-600-gray.jpg';
-import me1000 from '../../assets/images/me-1000-gray.jpg';
-import me1880 from '../../assets/images/me-1880-gray.jpg';
+import me300 from 'assets/images/me-300-gray.jpg';
+import me600 from 'assets/images/me-600-gray.jpg';
+import me1000 from 'assets/images/me-1000-gray.jpg';
+import me1880 from 'assets/images/me-1880-gray.jpg';
 import './Header.css';
 
 const Header = () => (

@@ -1,6 +1,6 @@
 import React from 'react';
 import Helmet from 'react-helmet';
-import cardImg from '../../assets/images/me-500.jpg';
+import cardImg from 'assets/images/me-500.jpg';
 
 const Meta = () => (
   <Helmet htmlAttributes={{ lang: 'en' }}>

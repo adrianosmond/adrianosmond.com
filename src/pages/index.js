@@ -1,12 +1,12 @@
 import React from 'react';
-import Layout from '../components/Layout';
-import ContactGrid from '../components/ContactGrid';
-import cvPdf from '../assets/adrian-osmond-cv.pdf';
-import meMountain300 from '../assets/images/me-mountain-300.jpg';
-import meMountain600 from '../assets/images/me-mountain-600.jpg';
-import meMountain900 from '../assets/images/me-mountain-900.jpg';
-import meMountain1200 from '../assets/images/me-mountain-1200.jpg';
-import meMountain1500 from '../assets/images/me-mountain-1500.jpg';
+import Layout from 'components/Layout';
+import ContactGrid from 'components/ContactGrid';
+import cvPdf from 'assets/adrian-osmond-cv.pdf';
+import meMountain300 from 'assets/images/me-mountain-300.jpg';
+import meMountain600 from 'assets/images/me-mountain-600.jpg';
+import meMountain900 from 'assets/images/me-mountain-900.jpg';
+import meMountain1200 from 'assets/images/me-mountain-1200.jpg';
+import meMountain1500 from 'assets/images/me-mountain-1500.jpg';
 import './index.css';
 
 const IndexPage = () => (

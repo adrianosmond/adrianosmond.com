@@ -1,14 +1,14 @@
 import React from 'react';
 import Helmet from 'react-helmet';
-import HomepageHeader from '../HomepageHeader';
-import Meta from '../Meta';
-import Nav from '../Nav';
+import Header from 'components/Header';
+import Meta from 'components/Meta';
+import Nav from 'components/Nav';
 
 const Layout = ({ title, children, footer }) => (
   <>
     <Meta />
     <Helmet title={title} />
-    <HomepageHeader />
+    <Header />
     <Nav />
     <article className="container">
       <div className="content">{children}</div>
