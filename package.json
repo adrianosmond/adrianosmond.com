@@ -26,5 +26,6 @@
   "devDependencies": {
     "gatsby-plugin-root-import": "^2.0.6",
     "prettier": "^2.2.1"
-  }
+  },
+  "browserslist": [">0.5% and last 2 version", "not dead", "not ie 11", "not op_mini all"]
 }
