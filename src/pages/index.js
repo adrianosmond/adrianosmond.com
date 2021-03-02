@@ -20,6 +20,7 @@ const IndexPage = () => (
         width="1500"
         height="1000"
         sizes="100vw"
+        loading="lazy"
       />
     }
   >
