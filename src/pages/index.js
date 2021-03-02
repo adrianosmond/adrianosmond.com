@@ -18,6 +18,9 @@ const IndexPage = () => (
         srcSet={`${meMountain300} 300w, ${meMountain600} 600w, ${meMountain900} 900w, ${meMountain1200} 1200w, ${meMountain1500} 1500w`}
         alt="Me in Arthur's Pass National Park, New Zealand"
         style={{ display: 'block' }}
+        width="1500"
+        height="1000"
+        sizes="100vw"
       />
     }
   >

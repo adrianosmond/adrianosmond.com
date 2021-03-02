@@ -3,7 +3,7 @@ import Helmet from 'react-helmet';
 import cardImg from '../../assets/images/me-500.jpg';
 
 const Meta = () => (
-  <Helmet>
+  <Helmet htmlAttributes={{ lang: 'en' }}>
     <title>The personal site of Adrian Osmond - adrianosmond.com</title>
     <meta
       name="description"
