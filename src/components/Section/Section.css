@@ -1,13 +1,11 @@
 .section {
   padding: 1px 0;
-  text-align: justify;
 }
 
 .section__heading {
   margin-top: 2em;
   margin-bottom: 1rem;
   font-size: 2rem;
-  text-align: right;
 }
 
 .section__intro {
@@ -30,12 +28,14 @@
   }
 }
 
-@media (min-width: 60em) {
+@media (min-width: 60em) {  
   .section__heading {
+    text-align: right;
     font-size: 4rem;
   }
-
+  
   .section__intro {
+    text-align: justify;
     margin-left: 10rem;
   }
 }
