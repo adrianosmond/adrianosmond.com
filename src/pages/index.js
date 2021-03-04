@@ -1,26 +1,20 @@
 import React from 'react';
+import { StaticImage } from 'gatsby-plugin-image';
 import Layout from 'components/Layout';
 import ContactGrid from 'components/ContactGrid';
 import Section from 'components/Section';
 import cvPdf from 'assets/adrian-osmond-cv.pdf';
-import meMountain300 from 'assets/images/me-mountain-300.jpg';
-import meMountain600 from 'assets/images/me-mountain-600.jpg';
-import meMountain900 from 'assets/images/me-mountain-900.jpg';
-import meMountain1200 from 'assets/images/me-mountain-1200.jpg';
-import meMountain1500 from 'assets/images/me-mountain-1500.jpg';
 
 const IndexPage = () => (
   <Layout
     title="The personal site of Adrian Osmond - adrianosmond.com"
     footer={
-      <img
-        src={meMountain300}
-        srcSet={`${meMountain300} 300w, ${meMountain600} 600w, ${meMountain900} 900w, ${meMountain1200} 1200w, ${meMountain1500} 1500w`}
+      <StaticImage
+        src="../assets/images/me-mountain.jpg"
         alt="Me in Arthur's Pass National Park, New Zealand"
-        width="1500"
-        height="1000"
-        sizes="100vw"
-        loading="lazy"
+        aspectRatio={15 / 10}
+        layout="fullWidth"
+        formats={['auto', 'webp', 'avif']}
       />
     }
   >
