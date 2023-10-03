@@ -3,36 +3,28 @@
   "description": "The website of Adrian Osmond",
   "version": "1.0.0",
   "author": "Adrian Osmond",
-  "dependencies": {
-    "gatsby": "^3.1.1",
-    "gatsby-plugin-image": "^1.1.1",
-    "gatsby-plugin-sharp": "^3.1.1",
-    "gatsby-source-filesystem": "^3.1.0",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1",
-    "react-helmet": "^6.1.0"
-  },
-  "keywords": [
-    "gatsby"
-  ],
-  "license": "MIT",
-  "main": "n/a",
+  "type": "module",
   "scripts": {
-    "build": "gatsby build",
-    "develop": "gatsby develop",
-    "format": "prettier --trailing-comma all --single-quote --write \"src/**/*.js\"",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "astro": "^3.2.2"
   },
   "devDependencies": {
-    "gatsby-plugin-netlify": "^3.1.0",
-    "gatsby-plugin-react-helmet": "^4.1.0",
-    "gatsby-plugin-root-import": "^2.0.6",
-    "prettier": "^2.2.1"
-  },
-  "browserslist": [
-    ">0.5% and last 2 version",
-    "not dead",
-    "not ie 11",
-    "not op_mini all"
-  ]
+    "@types/eslint": "^8.44.3",
+    "@typescript-eslint/eslint-plugin": "^6.7.4",
+    "@typescript-eslint/parser": "^6.7.4",
+    "eslint": "^8.50.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-astro": "^0.29.1",
+    "eslint-plugin-jsx-a11y": "^6.7.1",
+    "eslint-plugin-prettier": "^5.0.0",
+    "prettier": "^3.0.3",
+    "prettier-config-standard": "^7.0.0",
+    "prettier-plugin-astro": "^0.12.0"
+  }
 }

@@ -1,0 +1,82 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Section from "../components/Section.astro";
+import ContactGrid from "../components/ContactGrid.astro";
+---
+
+<Layout>
+  <Section id="about-me" title="About me">
+    <p slot="intro">
+      I'm a UK born, Amsterdam based front-end developer. I enjoy working on
+      well-designed solutions to interesting problems with smart people. If
+      you're interested in knowing more about what I've done professionally, you
+      can{" "}
+      <a href="/adrian-osmond-cv.pdf" target="_blank" rel="noopener noreferrer">
+        take a look at my CV
+      </a>
+    </p>
+    <p>
+      Outside of work I love hiking and photography. You can read a bit more
+      about that and see some photos I took in{" "}
+      <a
+        href="https://addressless.co.uk/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        a site that I made
+      </a>{" "}
+       when my wife and I spent 3 months in a campervan travelling around New
+      Zealand before we moved from London to Amsterdam.
+    </p>
+  </Section>
+  <Section id="get-in-touch" title="Get in touch">
+    <Fragment slot="intro">
+      <p>
+        Feel free to reach out to me if you have something to say or you think
+        we should work together. If you do want to get in touch, here are a few
+        ways you can reach me:
+      </p>
+      <ContactGrid />
+    </Fragment>
+  </Section>
+  <picture class="footer-img" slot="footer">
+    <source
+      type="image/avif"
+      srcset="/images/me-mountain-sm.avif 750w,
+              /images/me-mountain-md.avif 1080w,
+              /images/me-mountain-lg.avif 1366w,
+              /images/me-mountain-xl.avif 1500w"
+      sizes="100vw"
+    />
+    <source
+      type="image/webp"
+      srcset="/images/me-mountain-sm.webp 750w,
+              /images/me-mountain-md.webp 1080w,
+              /images/me-mountain-lg.webp 1366w,
+              /images/me-mountain-xl.webp 1500w"
+      sizes="100vw"
+    />
+    <img
+      class="mountain-img"
+      sizes="100vw"
+      decoding="async"
+      loading="lazy"
+      alt="Me in Arthur's Pass National Park, New Zealand"
+      src="/images/me-mountain-xl.jpg"
+      srcset="/images/me-mountain-sm.jpg 750w,
+              /images/me-mountain-md.jpg 1080w,
+              /images/me-mountain-lg.jpg 1366w,
+              /images/me-mountain-xl.jpg 1500w"
+    />
+  </picture>
+</Layout>
+
+<style>
+  .footer-img {
+    width: 100%;
+  }
+
+  .mountain-img {
+    aspect-ratio: 15 / 10;
+  }
+</style>

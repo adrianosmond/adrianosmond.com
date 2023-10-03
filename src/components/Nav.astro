@@ -1,0 +1,66 @@
+<nav class="nav">
+  <a class="nav__link" href="#about-me"> About me</a>
+  <a class="nav__link" href="#get-in-touch"> Get in touch</a>
+</nav>
+
+<style>
+  .nav {
+    position: sticky;
+    top: -1px;
+    z-index: 1;
+    background-color: var(--color-blue);
+    color: var(--color-white);
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .nav__link {
+    display: inline-block;
+    padding: 1em;
+    color: inherit;
+    text-decoration: none;
+    line-height: 1;
+  }
+
+  .nav__link:hover,
+  .nav__link:focus {
+    text-decoration: underline;
+  }
+
+  @media (min-width: 36em) {
+    :root {
+      --nav-height: 4.5rem;
+    }
+
+    .nav {
+      font-size: 1.5rem;
+    }
+  }
+
+  @media (min-width: 60em) {
+    :root {
+      --nav-triangle-size: 4.5rem;
+    }
+
+    .nav {
+      margin-left: var(--content-triangle-size);
+      justify-content: flex-start;
+    }
+
+    .nav::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: calc(-1 * var(--nav-triangle-size));
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 0 var(--nav-triangle-size) var(--nav-triangle-size) 0;
+      border-color: transparent var(--color-blue) transparent transparent;
+    }
+
+    .nav__link {
+      padding: 1em 1.5em;
+    }
+  }
+</style>

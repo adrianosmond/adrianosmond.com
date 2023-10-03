@@ -1,0 +1,61 @@
+---
+type Props = {
+  id: string;
+  title: string;
+};
+
+const { id, title } = Astro.props;
+---
+
+<section class="section" id={id}>
+  <h2 class="section__heading">{title}</h2>
+  <div class="section__intro">
+    <slot name="intro" />
+  </div>
+  <slot />
+</section>
+
+<style>
+  .section {
+    padding: 1px 0;
+  }
+
+  .section__heading {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+  }
+
+  .section__intro {
+    font-size: 1.25rem;
+    line-height: 1.3;
+  }
+
+  .section > :global(p) {
+    line-height: 1.4;
+    margin-top: 2em;
+  }
+
+  @media (min-width: 36em) {
+    .section__heading {
+      font-size: 3rem;
+    }
+
+    .section__intro {
+      font-size: 1.75rem;
+    }
+  }
+
+  @media (min-width: 60em) {
+    .section__heading {
+      margin-top: 6rem;
+      text-align: right;
+      font-size: 4rem;
+    }
+
+    .section__intro {
+      text-align: justify;
+      margin-left: 10rem;
+    }
+  }
+</style>
