@@ -74,6 +74,38 @@ select {
   }
 }
 
+@font-face {
+  font-family: 'Playfair Display';
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/playfairdisplay/v36/nuFvD-vYSZviVYUb_rj3ij__anPXJzDwcbmjWBN2PKfsunDXbtPK_l2q.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: "Playfair Display-fallback";
+  size-adjust: 113%;
+  ascent-override: 94%;
+  src: local("Times New Roman");
+}
+
+@font-face {
+  font-family: 'Alegreya Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/alegreyasans/v24/5aUz9_-1phKLFgshYDvh6Vwt7VptvWdUhm8.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: "Alegreya Sans-fallback";
+  size-adjust: 86.5%;
+  src: local("Arial");
+}
+
+
 :root {
   --color-blue: #1258A0;
   --color-gray: #f7f7f7;
@@ -83,14 +115,13 @@ select {
 
 body {
   background-color: var(--color-gray);
-  font-family: 'Alegreya Sans',sans-serif;
+  font-family: "Alegreya Sans", "Alegreya Sans-fallback", sans-serif;
   color: #1A1D27;
   overscroll-behavior-y: none;
 }
 
-
 h1, h2 {
-  font-family: 'Playfair Display', serif;
+  font-family: "Playfair Display", "Playfair Display-fallback", serif;
   font-weight: 900;
   letter-spacing: -0.025em;
 }
