@@ -1,31 +1,19 @@
+---
+import { Picture } from "astro:assets";
+import me from "../assets/me.jpg";
+---
+
 <div class="image-wrapper">
-  <picture>
-    <source
-      type="image/avif"
-      srcset="/images/me-sm.avif 232w,
-            /images/me-md.avif 463w,
-            /images/me-lg.avif 926w"
-      sizes="(min-width: 36rem) 50vh, 10rem"
-    />
-    <source
-      type="image/webp"
-      srcset="/images/me-sm.webp 232w,
-            /images/me-md.webp 463w,
-            /images/me-lg.webp 926w"
-      sizes="(min-width: 36rem) 50vh, 10rem"
-    />
-    <img
-      class="me"
-      sizes="(min-width: 36rem) 50vh, 10rem"
-      decoding="async"
-      loading="eager"
-      src="/images/me-lg.jpg"
-      srcset="/images/me-sm.jpg 232w,
-            /images/me-md.jpg 463w,
-            /images/me-lg.jpg 926w"
-      alt="Adrian Osmond"
-    />
-  </picture>
+  <Picture
+    src={me}
+    formats={["avif", "webp"]}
+    fallbackFormat="jpg"
+    alt="Adrian Osmond"
+    class="me"
+    quality={60}
+    widths={[230, 460, me.width]}
+    sizes="(min-width: 36rem) 50vh, 10rem"
+  />
 </div>
 <h1 class="welcome">
   <span class="welcome__hello">Hello!</span>

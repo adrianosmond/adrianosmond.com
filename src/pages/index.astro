@@ -1,7 +1,9 @@
 ---
+import { Picture } from "astro:assets";
 import Layout from "../layouts/Layout.astro";
 import Section from "../components/Section.astro";
 import ContactGrid from "../components/ContactGrid.astro";
+import meMountain from "../assets/me-mountain.jpg";
 ---
 
 <Layout>
@@ -39,36 +41,18 @@ import ContactGrid from "../components/ContactGrid.astro";
       <ContactGrid />
     </Fragment>
   </Section>
-  <picture class="footer-img" slot="footer">
-    <source
-      type="image/avif"
-      srcset="/images/me-mountain-sm.avif 750w,
-              /images/me-mountain-md.avif 1080w,
-              /images/me-mountain-lg.avif 1366w,
-              /images/me-mountain-xl.avif 1500w"
-      sizes="100vw"
-    />
-    <source
-      type="image/webp"
-      srcset="/images/me-mountain-sm.webp 750w,
-              /images/me-mountain-md.webp 1080w,
-              /images/me-mountain-lg.webp 1366w,
-              /images/me-mountain-xl.webp 1500w"
-      sizes="100vw"
-    />
-    <img
+  <div class="footer-img" slot="footer">
+    <Picture
+      src={meMountain}
+      formats={["avif", "webp"]}
+      fallbackFormat="jpg"
+      alt="Me at Arthur's Pass National Park, New Zealand"
       class="mountain-img"
+      quality={60}
+      widths={[750, 1080, 1366, 1500]}
       sizes="100vw"
-      decoding="async"
-      loading="lazy"
-      alt="Me in Arthur's Pass National Park, New Zealand"
-      src="/images/me-mountain-xl.jpg"
-      srcset="/images/me-mountain-sm.jpg 750w,
-              /images/me-mountain-md.jpg 1080w,
-              /images/me-mountain-lg.jpg 1366w,
-              /images/me-mountain-xl.jpg 1500w"
     />
-  </picture>
+  </div>
 </Layout>
 
 <style>
